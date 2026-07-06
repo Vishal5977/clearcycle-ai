@@ -1,0 +1,43 @@
+ClearCycle AI — Demo Note
+(Submitted in place of a video demo due to time constraints)
+
+Live Prototype: https://vishal5977.github.io/clearcycle-ai/
+GitHub Repo: https://github.com/Vishal5977/clearcycle-ai
+
+WHAT TO EXPLORE IN THE LIVE DASHBOARD:
+
+1. KPI Cards (top of page)
+   - 412 t/day waste generated across 5 pilot Tier-2/3 Karnataka cities
+   - 17 active illegal dumping hotspots
+   - 9 crop-residue burning alerts (7-day)
+   - Estimated ₹8.4L/month savings from AI-recommended route optimization
+
+2. Waste Generation Trend & Forecast (chart)
+   - 6 months of actual data
+   - 2-month AI-generated forecast (dashed line)
+
+3. Pilot City & Alert Status (right panel)
+   - Live status per city: Hubli-Dharwad, Belagavi, Davangere, Ballari, Tumakuru
+   - Color-coded: normal / warning / alert
+
+4. AI Decision Assistant (bottom panel) — THE CORE FEATURE
+   - Click any suggested question chip, or type your own:
+     "Which wards have overflowing bins today?"
+     "What is the waste trend in Hubli-Dharwad?"
+     "Any crop burning alerts this week?"
+     "Where should we build a compost plant?"
+   - Returns a natural-language, action-oriented answer
+   - In production this queries Vertex AI (Gemini) + BigQuery in real time
+     across IoT sensors, satellite imagery, and citizen reports
+
+PROBLEM SOLVED:
+Bengaluru absorbs nearly all waste-tech attention and funding in Karnataka.
+Tier-2/3 cities and their surrounding agricultural belts have almost no
+AI-driven decision support for solid or agricultural waste — despite rapid
+urban growth and heavy crop-residue burning. ClearCycle AI closes that gap.
+
+TECH STACK (Production):
+Google Cloud — Vertex AI (Gemini API), BigQuery, Cloud Storage, Pub/Sub,
+Cloud Run, Firebase.
+
+Author: Vishal Patil — github.com/Vishal5977
