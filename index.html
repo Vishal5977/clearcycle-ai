@@ -73,6 +73,10 @@
       <button class="chip" onclick="ask('What is the waste trend in Hubli-Dharwad?')">Trend in Hubli-Dharwad</button>
       <button class="chip" onclick="ask('Any crop burning alerts this week?')">Crop burning alerts</button>
       <button class="chip" onclick="ask('Where should we build a compost plant?')">Compost plant siting</button>
+      <button class="chip" onclick="ask('Which city has the highest waste accumulation?')">Highest accumulation city</button>
+      <button class="chip" onclick="ask('What is the segregation compliance rate?')">Segregation compliance</button>
+      <button class="chip" onclick="ask('How does this compare to Bengaluru?')">Compare to Bengaluru</button>
+      <button class="chip" onclick="ask('How does route optimization work?')">Route optimization</button>
     </div>
     <div class="chat">
       <div class="chat-log" id="chatLog"></div>
@@ -130,6 +134,10 @@ const kb = [
   {k:["burn","crop","agri","stubble"], a:"9 active burning alerts detected via satellite thermal data in Tumakuru & Davangere agri belts this week — typical for post-harvest season. Recommend targeted farmer SMS advisory on residue collection incentives."},
   {k:["compost","biogas","plant","siting"], a:"Based on agri-waste density and road access, Tumakuru's northern taluk scores highest for a new biogas plant — within 8km of 3 major residue-generating clusters."},
   {k:["hotspot","dump","illegal"], a:"17 illegal dumping hotspots are currently active across pilot cities, concentrated near Davangere's outer ring road. 3 were resolved this week after officer dispatch."},
+  {k:["highest","accumulation","most waste","top city","biggest"], a:"Davangere currently has the highest waste accumulation among pilot cities at 512 tonnes/day, followed by Hubli-Dharwad at 428 t/day. Davangere's outer ring road zone is the single largest contributor."},
+  {k:["segregat"], a:"Wet-dry segregation compliance across pilot wards is at 61% this month, up from 54% last quarter. Belagavi's residential zones lag furthest behind at 42% compliance — recommend a targeted awareness drive."},
+  {k:["bengaluru","bangalore","compare"], a:"Unlike Bengaluru, which has dedicated AI-driven waste analytics, Tier-2/3 cities like Hubli-Dharwad and Davangere have had none until now. Per-capita waste generation is lower, but response time to hotspots is 3x slower due to lack of real-time visibility."},
+  {k:["route","optimi","collection vehicle","truck"], a:"AI-recommended route optimization for this week reduces total collection distance by 14% across pilot cities by re-sequencing Route D-3 and D-7 around the newly flagged Ward 12 hotspot."},
 ];
 function findAnswer(q){
   const ql = q.toLowerCase();
